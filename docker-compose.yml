@@ -6,7 +6,6 @@ backend:
   ports:
     - "3003:4040"
   environment:
-    - "MONGO_HOST=mongodb://db/dev"
     - "DEBUG=express-mongoose-es6-rest-api:*"
     - "NODE_ENV=development"
     - "JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f"
