@@ -20,9 +20,14 @@ export const Top = styled.div`
   align-items: center;
 `;
 
-export const Bottom = styled.div`
+export const Middle = styled.div`
   border-top: 1px solid ${grey200};
   width: 100%;
+  flex-grow: 1;
+`;
+
+export const Bottom = styled.div`
+  padding-left: 20px;
 `;
 
 export default Wrapper;

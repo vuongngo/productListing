@@ -9,8 +9,8 @@ const ProductPaginate = (props) => {
   return (
     <Wrapper>
       <ReactPaginate
-        previousLabel={'previous'}
-        nextLabel={'next'}
+        previousLabel={'< Previous page'}
+        nextLabel={'Next page >'}
         breakClassName={styles.page}
         forcePage={props.page}
         pageCount={props.totalPages}

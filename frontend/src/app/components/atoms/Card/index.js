@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Wrapper, { Top, Bottom } from './Wrapper';
+import Wrapper, { Top, Bottom, Middle } from './Wrapper';
 
 function Card(props) {
   return (
@@ -15,6 +15,9 @@ function Card(props) {
       <Top>
         {props.top}
       </Top>
+      <Middle>
+        {props.middle}
+      </Middle>
       <Bottom>
         {props.bottom}
       </Bottom>
@@ -25,6 +28,7 @@ function Card(props) {
 Card.propTypes = {
   top: PropTypes.element,
   bottom: PropTypes.element,
+  middle: PropTypes.element,
 };
 
 export default Card;

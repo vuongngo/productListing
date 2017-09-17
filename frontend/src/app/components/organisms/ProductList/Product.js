@@ -12,13 +12,13 @@ const Product = props => (
   <Col xs={12} md={4} lg={3}>
     <Card
       top={<Image src={props.product_image} />}
-      bottom={
+      middle={
         <Wrapper>
           <LargeText>{props.product_name}</LargeText>
           <SmallText>{props.description}</SmallText>
-          <H3>{props.price}</H3>
         </Wrapper>
       }
+      bottom={<H3>{props.price}</H3>}
     />
   </Col>
 );
