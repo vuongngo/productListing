@@ -1,0 +1,28 @@
+backend:
+  build: ./backend
+  volumes:
+    - ./backend:/app
+    - /app/node_modules/
+  ports:
+    - "4040:4040"
+  environment:
+    - "DEBUG=express-mongoose-es6-rest-api:*"
+    - "NODE_ENV=test"
+    - "JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f"
+  extra_hosts:
+    - "localhost:4040"
+  command: ["yarn", "test"]
+frontend:
+  build: ./frontend
+  volumes:
+    - ./frontend:/app
+    - /app/node_modules/
+  links:
+  - backend
+  ports:
+    - "3000:3000"
+    - "3001:3001"
+  environment:
+    - "API_URL=http://localhost:3000/api"
+    - "APP_URL=http://localhost:3000"
+  command: ["yarn", "test"]

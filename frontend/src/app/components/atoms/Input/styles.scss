@@ -1,0 +1,42 @@
+.TextInput input {
+  border: 0px;
+  border-bottom: 1px solid grey;
+  color: black;
+}
+
+.TextInput {
+  border: 0px;
+  border-bottom: 1px solid grey;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 20px;
+  width: 100%;
+}
+
+.TextInput input {
+  &:focus {
+    border: 0px;
+    border-bottom: 1px solid blue;
+    outline:0px none transparent;
+  }
+}
+
+.TextInput {
+  &:focus {
+    border: 0px;
+    border-bottom: 1px solid blue;
+    outline:0px none transparent;
+  }
+}
+
+.TextInput::-webkit-input-placeholder {
+  color: grey;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.invalid {
+  border: 0px;
+  border-bottom: 1px solid red;
+}

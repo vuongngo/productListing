@@ -1,0 +1,6 @@
+[submodule "admin"]
+	path = admin
+  url = https://github.com/vuongngo/docker-demo-admin.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/vuongngo/docker-demo-backend.git

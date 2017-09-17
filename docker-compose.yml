@@ -1,0 +1,29 @@
+backend:
+  build: ./backend
+  volumes:
+    - ./backend:/app
+    - /app/node_modules/
+  ports:
+    - "3003:4040"
+  environment:
+    - "MONGO_HOST=mongodb://db/dev"
+    - "DEBUG=express-mongoose-es6-rest-api:*"
+    - "NODE_ENV=development"
+    - "JWT_SECRET=0a6b944d-d2fb-46fc-a85e-0295c986cd9f"
+  extra_hosts:
+    - "localhost:4040"
+  command: [ "npm", "start" ]
+frontend:
+  build: ./frontend
+  volumes:
+    - ./frontend:/app
+    - /app/node_modules/
+  links:
+    - backend
+  ports:
+    - "3000:3000"
+    - "3001:3001"
+  environment:
+    - "API_URL=http://localhost:3000/api"
+    - "APP_URL=http://localhost:3000"
+    - "PROXY_URL=http://backend:4040"
