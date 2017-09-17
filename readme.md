@@ -1,7 +1,7 @@
 # Product Listing
 
 ## Overview
-1. Product Listing compose two containers   
+1. Product Listing includes two containers   
 + Frontend (universal React/Redux)   
 + Backend (Node/Express)   
 2. Why there is addional backend?   
@@ -12,24 +12,24 @@
 ## Run manually
 1. Run backend then frontend  
 2. Commands   
-'''
+```
 yarn install
 yarn test
 yarn start
-'''
 
+```
 ## Run with Docker Compose
 1. Dev   
-'''
+```
 docker-compose build
 docker-compose up
-'''
+```
 
 2. Test    
-'''
+```
 docker-compose -f docker-compose-test.yml build
 docker-compose -f docker-compose-test.yml up
-'''
+```
 
 
 
